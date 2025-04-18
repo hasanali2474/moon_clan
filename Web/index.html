@@ -4,14 +4,398 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Moon Clan - فريق متميز من المبدعين">
-    <title>꧁MoonClan꧂  ⋆｡˚❃˚｡⋆</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Moon Clan | فريقنا المميز</title>
+    
     <!-- روابط الخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     
+    <!-- CSS المُضمّن لتسريع التحميل -->
+    <style>
+        /* تحسين عام */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* خلفية متطورة مع تدرج حديث متحرك */
+        body {
+            color: white;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #162447);
+            background-size: 400% 400%;
+            animation: gradientBackground 20s ease infinite;
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* شريط تقدم متحرك في الأعلى */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4CAF50, #2196F3, #9C27B0, #FF9800);
+            background-size: 300% 300%;
+            animation: progressBar 3s ease-out, gradientChange 10s infinite ease-in-out;
+            z-index: 1000;
+        }
+
+        @keyframes progressBar {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes gradientChange {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* تحسين العنوان الرئيسي */
+        #h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 3rem auto 1.5rem;
+            padding: 1rem 0.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(33, 150, 243, 0.4);
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #h1::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, #4CAF50, #2196F3, #9C27B0);
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { width: 80px; opacity: 0.6; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 80px; opacity: 0.6; }
+        }
+
+        /* تحسين الخط الفاصل */
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            margin: 1.5rem auto;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        /* تحسين عناوين الأقسام */
+        h4 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 2rem 0 1.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 0 1rem;
+        }
+
+        h4::before, h4::after {
+            content: "✧";
+            color: #4CAF50;
+            display: inline-block;
+            margin: 0 0.8rem;
+            font-size: 1.8rem;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(76, 175, 80, 0.7); }
+            100% { text-shadow: 0 0 20px rgba(76, 175, 80, 1), 0 0 30px rgba(76, 175, 80, 0.5); }
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #f0f0f0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* تحسين الحاوية الرئيسية */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin: 2rem auto;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            padding: 1rem;
+            perspective: 1000px;
+        }
+
+        /* تحسين بطاقات الأعضاء */
+        #Hasan, #AliH {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(255, 255, 255, 0.3);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 260px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #Hasan::before, #AliH::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        #Hasan:hover, #AliH:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 3px rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        #Hasan:hover::before, #AliH:hover::before {
+            opacity: 1;
+        }
+
+        /* تحسين الصور */
+        img {
+            border-radius: 50%; /* صور دائرية */
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(33, 150, 243, 0.3);
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            filter: brightness(1.05);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 0 8px rgba(33, 150, 243, 0.5);
+            filter: brightness(1.2) contrast(1.1);
+        }
+
+        /* زر اليوتيوب */
+        .youtube-button {
+            background: linear-gradient(45deg, #FF0000, #CC0000); /* ألوان اليوتيوب */
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
         
+        .youtube-button::before {
+            content: "▶️"; /* رمز التشغيل */
+            font-size: 1.2rem;
+        }
+        
+        .youtube-button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s;
+        }
+        
+        .youtube-button:hover {
+            background: linear-gradient(45deg, #CC0000, #FF0000);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.6);
+            transform: translateY(-5px);
+        }
+        
+        .youtube-button:hover::after {
+            left: 100%;
+        }
+
+        /* تحسين زر الديسكورد وتنسيق الأزرار */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 2rem auto;
+        }
+
+        #butoon {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        #butoon button {
+            background: linear-gradient(45deg, #5865F2, #404EED); /* ألوان ديسكورد */
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 6px 15px rgba(88, 101, 242, 0.4);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        #butoon button::before {
+            content: "🔌"; /* رمز الديسكورد */
+            font-size: 1.2rem;
+        }
+
+        #butoon button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s;
+        }
+
+        #butoon button:hover {
+            background: linear-gradient(45deg, #404EED, #5865F2);
+            box-shadow: 0 10px 20px rgba(88, 101, 242, 0.6);
+            transform: translateY(-5px);
+        }
+
+        #butoon button:hover::after {
+            left: 100%;
+        }
+
+        /* تأثير للروابط */
+        a {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* رسالة ترحيب متحركة */
+        .welcome-msg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s;
+            max-width: 90%;
+        }
+
+        .welcome-msg.show {
+            opacity: 1;
+        }
+
+        /* شعار الموقع */
+        .logo {
+            max-width: 120px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        /* تحسينات للأجهزة المحمولة */
+        @media (max-width: 768px) {
+            #h1 {
+                font-size: 2.2rem;
+            }
+            
+            h4 {
+                font-size: 1.8rem;
+            }
+
+            h4::before, h4::after {
+                margin: 0 0.4rem;
+            }
+            
+            .container {
+                gap: 1.5rem;
+                padding: 0.5rem;
+            }
+            
+            #Hasan, #AliH {
+                width: 85%;
+                padding: 1.5rem;
+            }
+            
+            img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- العنوان الرئيسي -->
@@ -58,13 +442,100 @@
 
     <hr>
     
-    <!-- زر الديسكورد -->
-    <a href="https://discord.gg/AjqPmB7yej" id="butoon" target="_blank" title="انضم إلى سيرفر الديسكورد">
-        <button>
-            Discord Server
-        </button>
-    </a>
+    <!-- أزرار التواصل الاجتماعي -->
+    <div class="social-buttons">
+        <!-- زر اليوتيوب -->
+        <a href="https://www.youtube.com/@Moon_ClanS" id="youtube-btn" target="_blank" title="زيارة قناتنا على YouTube">
+            <button class="youtube-button">
+                قناتنا على YouTube
+            </button>
+        </a>
+        
+        <!-- زر الديسكورد -->
+        <a href="https://discord.gg/AjqPmB7yej" id="butoon" target="_blank" title="انضم إلى سيرفر الديسكورد">
+            <button>
+                Discord Server
+            </button>
+        </a>
+    </div>
 
-<script src="script.js"></script>
+    <!-- سكريبت جافاسكريبت محسن -->
+    <script>
+        // إظهار رسالة الترحيب
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Welcome to Moon Clan - Loading Complete");
+            
+            // إضافة تأثير ترحيب
+            setTimeout(() => {
+                const welcomeMsg = document.getElementById('welcomeMsg');
+                welcomeMsg.classList.add('show');
+                
+                setTimeout(() => {
+                    welcomeMsg.classList.remove('show');
+                }, 3000);
+            }, 1000);
+            
+            // إضافة تأثيرات التحريك للبطاقات
+            const cards = document.querySelectorAll('#Hasan, #AliH');
+            
+            cards.forEach((card, index) => {
+                // تأخير ظهور البطاقات بشكل متتالي
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 * (index + 1));
+                
+                // تأثير التحريك عند المرور
+                card.addEventListener('mousemove', handleMouseMove);
+            });
+            
+            // تحريك البطاقات بالماوس
+            function handleMouseMove(e) {
+                const card = this;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.05)`;
+            }
+            
+            // إعادة البطاقات لوضعها الطبيعي عند خروج الماوس
+            cards.forEach(card => {
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+                });
+            });
+            
+            // إضافة تأثير نبض للعنوان
+            const title = document.getElementById('h1');
+            title.addEventListener('mouseover', function() {
+                this.style.textShadow = '0 0 10px rgba(255,255,255,0.8), 0 0 30px rgba(33,150,243,0.8)';
+            });
+            
+            title.addEventListener('mouseleave', function() {
+                this.style.textShadow = '0 2px 10px rgba(0,0,0,0.8), 0 0 30px rgba(33,150,243,0.4)';
+            });
+            
+            // إضافة تأثير للأزرار
+            const buttons = document.querySelectorAll('#butoon button, .youtube-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-5px)';
+                    }, 200);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
